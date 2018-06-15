@@ -1,0 +1,20 @@
+# Created by https://www.gitignore.io/api/node
+
+# Coverage directory used by tools like istanbul
+coverage
+
+# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
+
+# Bower dependency directory (https://bower.io/)
+bower_components
+
+# Dependency directories
+node_modules/
+
+# Yarn Integrity file
+.yarn-integrity
+
+.DS_Store
+
+# End of https://www.gitignore.io/api/node

@@ -1,0 +1,29 @@
+{
+  "name": "medium-editor-tablelize",
+  "author": "Wender Freese <wender.jean@gmail.com>",
+  "version": "1.0.0",
+  "description": "MediumEditor extension to allow tablelize content",
+  "main": "dist/javascript/medium-editor-tablelize.js",
+  "scripts": {
+    "start": "open ./demo/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wenderjean/medium-editor-tablelize.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wenderjean/medium-editor-tablelize/issues",
+    "email": "wender.jean@gmail.com"
+  },
+  "keywords": [
+    "editor",
+    "medium",
+    "wysiwyg",
+    "table",
+    "excel"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "medium-editor": "^5.23.3"
+  }
+}
