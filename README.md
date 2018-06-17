@@ -13,14 +13,14 @@ On your app, link the style and the script and initialize MediumEditor with the 
 ...
   <link rel="stylesheet" href="<path_to_medium-editor>/dist/css/medium-editor.css" />
   <link rel="stylesheet" href="<path_to_medium-editor>/dist/css/themes/default.css" />
-  <link rel="stylesheet" href="<path_to_medium-editor-handsontable>/dist/css/medium-editor-handsontable.css" />
+  <link rel="stylesheet" href="<path_to_medium-editor-tablelize>/dist/css/medium-editor-tablelize.css" />
 ...
 </head>
 <body>
   <div class="editable"></div>
 
   <script type="text/javascript" src="<path_to_medium-editor>/dist/js/medium-editor.js"></script>
-  <script type="text/javascript" src="<path_to_medium-editor-handsontable>/dist/js/medium-editor-handsontable.js"></script>
+  <script type="text/javascript" src="<path_to_medium-editor-tablelize>/dist/js/medium-editor-tablelize.js"></script>
 
   <script type="text/javascript" charset="utf-8">
     var editor = new MediumEditor('.editable', {
