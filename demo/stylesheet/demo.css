@@ -1,0 +1,12 @@
+body {
+  background: #F5F5F5;
+}
+
+.title {
+  margin-top: 15px;
+  font-size: 2rem;
+}
+
+.editable {
+  background: #F1F1F1;
+}

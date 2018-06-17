@@ -18,32 +18,6 @@ var MediumEditorTablelize = MediumEditor.Extension.extend({
   },
 
   /**
-   * check if the selection is a table
-   * @returns {boolean}
-   */
-  isAlreadyApplied: function (node) {
-    if (!node) {
-      return false;
-    }
-
-    return node.nodeName.toLowerCase() === 'mark';
-  },
-
-  /**
-   * inactivate menu button
-   */
-  setInactive: function () {
-    this.button.classList.remove('medium-editor-button-active');
-  },
-
-  /**
-   * activate menu button
-   */
-  setActive: function () {
-    this.button.classList.add('medium-editor-button-active');
-  },
-
-  /**
    * returns a clone of the selection content
    * @returns {Contents}
    */
@@ -98,7 +72,28 @@ var MediumEditorTablelize = MediumEditor.Extension.extend({
            '<tbody>'
            + rows.join('') +
            '</tbody>' +
-           '</table>';
+           '</table>' + this.newLine();
+  },
+
+  /**
+   * @returns {Element} new line element
+   */
+  newLine: function() {
+    return '<p><br></p>';
+  },
+
+  /**
+   * set focus
+   */
+  setFocus: function() {
+    if (this.getEditorElements()[0].children.length === 0) {
+      return;
+    }
+
+    var elements = this.getEditorElements()[0].children;
+    var lastElement = elements[elements.length - 1];
+
+    MediumEditor.selection.clearSelection(this.base.selectElement(lastElement), true);
   },
 
   /**
@@ -116,7 +111,8 @@ var MediumEditorTablelize = MediumEditor.Extension.extend({
     var table = this.generateTable(content);
 
     this.replaceSelectionHtml(table);
-    this.isAlreadyApplied() ? this.setActive() : this.setInactive();
+    this.setFocus();
+
     this.base.checkContentChanged();
   }
 });
