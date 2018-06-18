@@ -33,7 +33,7 @@ On your app, link the style and the script and initialize MediumEditor with the 
         'h2',
         'bold',
         'italic',
-        'tabelize'
+        'tablelize'
       ],
       static: true,
       sticky: true

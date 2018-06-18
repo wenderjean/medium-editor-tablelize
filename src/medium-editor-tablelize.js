@@ -86,6 +86,7 @@ var MediumEditorTablelize = MediumEditor.Extension.extend({
    * set focus
    */
   setFocus: function() {
+    debugger;
     if (this.getEditorElements()[0].children.length === 0) {
       return;
     }
@@ -93,7 +94,8 @@ var MediumEditorTablelize = MediumEditor.Extension.extend({
     var elements = this.getEditorElements()[0].children;
     var lastElement = elements[elements.length - 1];
 
-    MediumEditor.selection.clearSelection(this.base.selectElement(lastElement), true);
+    this.base.selectElement(lastElement);
+    MediumEditor.selection.clearSelection(document, true);
   },
 
   /**
